@@ -1,16 +1,22 @@
 Build docker image from repo:
 
-    From inside the repo folder:
+    From inside the repo folder using Dockerfile:
 
-    sudo docker build -t phishtank-service .
-    sudo docker run -p 8000:8000 phishtank-service
+    docker build -t phishtank-api .
+    docker run -p 8000:8000 phishtank-api
 
     Will instantiate a docker image on port 8000.
 
 Download docker image:
     
-    If you want to just download and run the image, you can find it here
-    https://hub.docker.com/repository/docker/snowu/rapid7/general
+    If you want to just download and run the image, you can find it here:
+
+    https://hub.docker.com/repository/docker/snowu/phishtank-api/general
+
+    or pull directly with docker
+
+    sudo docker pull snowu/phishtank-api
+    sudo docker run -p 8000:8000 snowu/phishtank-api
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
