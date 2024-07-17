@@ -3,7 +3,7 @@ Build docker image from repo:
     From inside the repo folder using Dockerfile:
 
     docker build -t phishtank-api .
-    docker run -p 8000:8000 phishtank-api
+    docker run phishtank-api
 
     Will instantiate a docker image on port 8000.
 
