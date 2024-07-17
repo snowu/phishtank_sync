@@ -16,7 +16,7 @@ Download docker image:
     or pull directly with docker
 
     sudo docker pull snowu/phishtank-api
-    sudo docker run -p 8000:8000 snowu/phishtank-api
+    sudo docker run -p snowu/phishtank-api
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
