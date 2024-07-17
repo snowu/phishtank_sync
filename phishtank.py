@@ -94,14 +94,15 @@ async def startup_event():
 async def download_report(request: DownloadReportRequest):
     try:
         from_datetime = iso_to_utc(request.from_time)
+        now = datetime.now(timezone.utc)
 
-        if from_datetime > datetime.now(timezone.utc):
+        if from_datetime > now:
             raise ValueError("from_time cannot be in the future.")
 
         if request.to_time:
             to_datetime = iso_to_utc(request.to_time, include_day=True)
         else:
-            datetime.now(timezone.utc)
+            now
 
         if from_datetime > to_datetime:
             raise ValueError("from_time cannot be bigger than to_time.")
