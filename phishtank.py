@@ -102,7 +102,7 @@ async def download_report(request: DownloadReportRequest):
         if request.to_time:
             to_datetime = iso_to_utc(request.to_time, include_day=True)
         else:
-            now
+            to_datetime = now
 
         if from_datetime > to_datetime:
             raise ValueError("from_time cannot be bigger than to_time.")
